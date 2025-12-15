@@ -36,10 +36,8 @@ for i in ranges:
         for k in range(1, halfway + 1):
             subsection = number[:k]
             if number == (subsection * (length // k)):
-                # print(f"Adding {number=}\t{subsection=}\t{k=}")
                 invalid_IDs.append(j)
                 break
 
-# 36156785904   is too high
 print(f"Part 2 output:\t{sum(invalid_IDs)}")
 
