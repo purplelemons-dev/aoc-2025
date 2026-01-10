@@ -78,15 +78,7 @@ for idx, (prob, act) in enumerate(zip(problems_np, actions_np)):
                 break
 
         if end_idx == -1:
-            # for the life of me i cannot understand why the hell numpy refuses to include the final row. go ahead and run the code without this check, i dare you
-            # my solution was elegant and this is like if leonardo da vinci had to come back 2 weeks later and duct tape a new version of the mona lisa's face onto the painting
-            subsection = np.concatenate(
-                (
-                    problems_np[idx:end_idx],
-                    [problems_np[end_idx]]
-                ),
-                axis = 0
-            )
+            subsection = problems_np[idx:]
         else:
             subsection = problems_np[idx:end_idx]
 
